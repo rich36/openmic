@@ -1,6 +1,27 @@
 # openmic
 
-This is going to be a web application designed for open mic/open stage performers and organizers. This will allow organizers to set up performance details and advertise slots or invite people to perform. This will also provide performers a place for all of their performances to be listed.
+> A site for managing open mic nights
 
- [//]: # (https://gist.githubusercontent.com/PurpleBooth/109311bb0361f32d87a2/raw/824da51d0763e6855c338cc8107b2ff890e7dd43/README-Template.md)
+## Build Setup
 
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
