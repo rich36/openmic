@@ -5,7 +5,7 @@
             <h3>Upcoming Performances Near You</h3>
             
                 <div v-for="performance in performances">
-                    <h2>Venue: {{performance.venue.name}}</h2>
+                    <h2>Venue: <router-link :to="{ name: 'Venue', params: { id: performance.venue.venue_id }}">{{performance.venue.name}}</router-link></h2>
                     <p>Start: {{performance.dates.start}}</p>
 
                     <h3>Schedule</h3>
@@ -30,6 +30,7 @@ export default {
       'performances' : [
           {
               'venue' : {
+                  'venue_id': 1,
                   'name': 'Yellow Cab Tavern',
                   'address' : {
                       'street': '',

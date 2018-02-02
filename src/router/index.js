@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
 import Performer from '@/components/Performer'
+import Venue from '@/components/Venue'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/Perfomer/:id',
       name: 'Performer',
       component: Performer
+    },
+    {
+      path: '/Venue/:id',
+      name: 'Venue',
+      component: Venue
     },
   ]
 })
