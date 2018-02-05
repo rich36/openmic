@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
 import Performer from '@/components/Performer'
 import Venue from '@/components/Venue'
+import Help from '@/components/Help'
 
 Vue.use(Router)
 
@@ -24,5 +25,10 @@ export default new Router({
       name: 'Venue',
       component: Venue
     },
+    {
+      path: '/Help',
+      name: 'Help',
+      component: Help
+    }
   ]
 })
