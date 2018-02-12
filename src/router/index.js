@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Performer from '@/components/Performer'
 import Venue from '@/components/Venue'
 import Help from '@/components/Help'
+import Contact from '@/components/Contact'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/Help',
       name: 'Help',
       component: Help
-    }
+    },
+    {
+      path: '/Contact',
+      name: 'Contact',
+      component: Contact
+    },
   ]
 })
