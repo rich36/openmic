@@ -6,6 +6,7 @@ import Performer from '@/components/Performer'
 import Venue from '@/components/Venue'
 import Help from '@/components/Help'
 import Contact from '@/components/Contact'
+import FindPerformances from '@/components/Performances/Find'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/Contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/Performances/Find',
+      name: 'FindPerformances',
+      component: FindPerformances
     },
   ]
 })
