@@ -1,28 +1,37 @@
 /* eslint-disable */ 
 <template>
         <div>
-            <h1>Contact</h1>
+            <h1 class="title">Contact</h1>
             
             <p>Please note that this form is only for contacting the admin of this site. Any inquiries about specific shows or 
                 open mic sessions should be directed to the host of the open mic.</p>
 
             <form id='contact-form'>
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email Address:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" v-model="model.sender" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class='form-group'>
-                    <label for='subject'>Subject:</label>
-                    <input type='text' id='subject' name ='subject' class='form-control' v-model="model.subject" placeholder="Enter email subject" />
+                <div class="field">
+                    <label class="label">Email Address:</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Enter your email" v-model="model.sender">
+                    </div>
                 </div>
 
-                <div class='form-group'>
-                    <label for='message'>Message:</label>
-                    <textarea id='message' name ='message' class='form-control' v-model="model.message" placeholder="Enter your message"></textarea>
+                <div class="field">
+                    <label class="label">Subject:</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Enter your subject" v-model="model.subject" >
+                    </div>
                 </div>
-                <div class='form-group'>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+
+                <div class="field">
+                    <label class="label">Message:</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Enter your message" v-model="model.message" ></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-link">Send Message</button>
+                    </div>
                 </div>
             </form>
         </div>
