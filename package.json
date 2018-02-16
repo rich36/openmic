@@ -13,8 +13,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bulma": "^0.6.2",
+    "bulma-start": "0.0.2",
     "vue": "^2.5.2",
-    "vue-bootstrap-datetimepicker": "^4.1.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

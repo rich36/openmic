@@ -1,24 +1,48 @@
 /* eslint-disable */ 
 <template>
-
         <div>
-            <h3>Upcoming Performances Near You</h3>
-            
-                <div v-for="performance in performances">
-                    <h2>Venue: <router-link :to="{ name: 'Venue', params: { id: performance.venue.venue_id }}">{{performance.venue.name}}</router-link></h2>
-                    <p>Start: {{performance.dates.start}}</p>
-
-                    <h3>Schedule</h3>
-
-                    <div class="row" v-for="p in performance.performancelist">
-                        <div class="col-lg-6">
-                            <router-link :to="{ name: 'Performer', params: { id: p.performer_id }}">{{p.name}}</router-link>
-                        </div>
-                        <div class="col-lg-6">{{p.start_time}}</div>
+            <section class="hero is-info is-small">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">Open Mic</h1>
+                        <h2 class="subtitle">A site for open mic performers, hosts and attendees</h2>
                     </div>
-
                 </div>
-            
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="card">
+                                <div class="card-content">
+                                    <h2 class="title">Upcoming Performances Near You</h2> 
+                                      <div v-for="performance in performances">
+                                        <h2>Venue: <router-link :to="{ name: 'Venue', params: { id: performance.venue.venue_id }}">{{performance.venue.name}}</router-link></h2>
+                                        <p>Start: {{performance.dates.start}}</p>
+
+                                        <h3>Schedule</h3>
+
+                                        <div class="row" v-for="p in performance.performancelist">
+                                            <div class="col-lg-6">
+                                                <router-link :to="{ name: 'Performer', params: { id: p.performer_id }}">{{p.name}}</router-link>
+                                            </div>
+                                            <div class="col-lg-6">{{p.start_time}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <div class="card-content">
+                                    <h2 class="title">Open Mic</h2>
+                                    <p>Open Mic is an online portal for open mic and open stage performers to find and register for performances.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 </template>
 

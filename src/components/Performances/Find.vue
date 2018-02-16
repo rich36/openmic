@@ -7,32 +7,22 @@
 
             <form id='find-performance-form'>
 
-                 <div class="form-group">
-                    <label for="locationName">Location:</label>
-                    <input type="text" class="form-control" id="locationName" v-model="model.sender"  placeholder="City, State">
-                </div>
-                
-                <div class="input-group input-daterange">
-                    <date-picker v-model="model.start" :config="config"></date-picker>
-                    <div class="input-group-addon">to</div>
-                    <date-picker v-model="model.end" :config="config"></date-picker>
+                <div class="field">
+                    <label class="label">Location:</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input" id="locationName" v-model="model.sender">
+                    </div>
                 </div>
 
-                <div class='form-group'>
-                    <button type="submit" class="btn btn-primary">Find Performance</button>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-link">Submit</button>
+                    </div>
                 </div>
             </form>
         </div>
 </template>
 <script>
-// Import required dependencies 
-  import 'bootstrap/dist/css/bootstrap.css';
-  
-  // Import this component
-  import datePicker from 'vue-bootstrap-datetimepicker';
-  
-  // Import date picker css
-  import 'eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css';
 
 export default {
   name: 'FindPerformance',
@@ -45,18 +35,10 @@ export default {
             sender: '',
             start: '2018-02-01',
             end: '2018-02-28'
-        },
-        config: {
-            format: 'DD/MM/YYYY',
-            useCurrent: false,
-            showClear: true,
-            showClose: true,
         }
+       
     }
-  },
-    components: {
-        datePicker
-    }
+  }
 }
 </script>
 

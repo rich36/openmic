@@ -1,12 +1,39 @@
 <template>
   <div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/Performances/Find">Find Performances</router-link>
-    <router-link to="/Help">Help</router-link>
-    <router-link to="/Contact">Contact</router-link>
-    <div id="app">
-      <router-view/>
-    </div>
+    <nav  class="navbar">
+        <div class="navbar-brand">
+          <router-link to="/" class="navbar-item">
+          
+            <!--<img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">-->
+            <h1 class='title'>Open Mic</h1>
+          </router-link>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <router-link to="/" class="navbar-item">Home</router-link>
+            <router-link to="/Performances/Find" class="navbar-item">Find Performances</router-link>
+            <router-link to="/Help" class="navbar-item">Help</router-link>
+            <router-link to="/Contact" class="navbar-item">Contact</router-link>
+          </div>
+        </div>
+      </nav>
+      
+      <section class="section">
+        <div class="container is-fluid">
+          <router-view/>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <p>
+             &copy; 2018
+            </p>
+          </div>
+        </div>
+    </footer>
   </div>
 </template>
 
