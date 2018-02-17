@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable */
 <template>
         <div>
             <section class="hero is-info is-small">
@@ -15,18 +15,23 @@
                         <div class="column">
                             <div class="card">
                                 <div class="card-content">
-                                    <h2 class="title">Upcoming Performances Near You</h2> 
+                                    <h2 class="title">Upcoming Performances Near You</h2>
                                       <div v-for="performance in performances">
-                                        <h2>Venue: <router-link :to="{ name: 'Venue', params: { id: performance.venue.venue_id }}">{{performance.venue.name}}</router-link></h2>
-                                        <p>Start: {{performance.dates.start}}</p>
+                                        <div class="section">
+                                          <div class="tile">
+                                              <article class="tile is-child notification is-primary">
+                                                <p class="title"><router-link :to="{ name: 'Venue', params: { id: performance.venue.venue_id }}">
+                                                {{performance.venue.name}}</router-link></p>
+                                                <p class="subtitle">{{performance.dates.start}}</p>
+                                              </article>
+                                          </div>
 
-                                        <h3>Schedule</h3>
-
-                                        <div class="row" v-for="p in performance.performancelist">
-                                            <div class="col-lg-6">
+                                          <div class="columns" v-for="p in performance.performancelist">
+                                            <div class="column is-two-thirds">
                                                 <router-link :to="{ name: 'Performer', params: { id: p.performer_id }}">{{p.name}}</router-link>
                                             </div>
-                                            <div class="col-lg-6">{{p.start_time}}</div>
+                                            <div class="column is-one-third">{{p.start_time}}</div>
+                                          </div>
                                         </div>
                                     </div>
                                 </div>
@@ -47,51 +52,12 @@
 </template>
 
 <script>
+import {GetUpcomingPerformances } from '../managers/performanceManager.js'
+
 export default {
   name: 'Home',
   data () {
-    return {
-      'performances' : [
-          {
-              'venue' : {
-                  'venue_id': 1,
-                  'name': 'Yellow Cab Tavern',
-                  'address' : {
-                      'street': '',
-                      'street 2' : '',
-                      'city': 'Dayton',
-                      'state' : 'OH',
-                      'zip' : '45402'
-                  },
-                  'website' : '',
-                  'phone' : ''
-              },
-              'organizer' :{
-                  'name' : 'Mr. Open Mic'
-              },
-              'dates': {
-                  'start' : '2018-01-02 8:00 PM'
-              },
-              'performancelist' :  [
-                      {
-                          name: 'Johnny Songwriter',
-                          performer_id: 1,
-                          start_time: '8:00PM'
-                      },
-                      {
-                          name: 'Chuckie Heartz',
-                          performer_id: 2,
-                          start_time: '8:30PM'
-                      },
-                      {
-                          name: 'Kylie Ups',
-                          performer_id: 3,
-                          start_time: '9:00PM'
-                      }
-                  ]
-          }
-      ]
-    }
+    return GetUpcomingPerformances();
   }
 }
 </script>

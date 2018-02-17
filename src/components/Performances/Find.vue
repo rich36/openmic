@@ -1,8 +1,8 @@
-/* eslint-disable */ 
+/* eslint-disable */
 <template>
         <div>
-            <h1>Find Performance</h1>
-            
+            <h1 class='title'>Find Performance</h1>
+
             <p>Find a performance near you to attend or to sign up for.</p>
 
             <form id='find-performance-form'>
@@ -10,7 +10,7 @@
                 <div class="field">
                     <label class="label">Location:</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Text input" id="locationName" v-model="model.sender">
+                        <input class="input" type="text" placeholder="City, State" id="locationName" v-model="model.locationname">
                     </div>
                 </div>
 
@@ -30,13 +30,8 @@ export default {
     return {
         title: 'Open Mic - Find Performance',
         model: {
-            subject: '',
-            message: '',
-            sender: '',
-            start: '2018-02-01',
-            end: '2018-02-28'
+            locationname: ''
         }
-       
     }
   }
 }
