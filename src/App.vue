@@ -1,10 +1,8 @@
 <template>
   <div>
-    <nav  class="navbar">
+    <nav  class="navbar is-fixed-top">
         <div class="navbar-brand">
           <router-link to="/" class="navbar-item">
-          
-            <!--<img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">-->
             <h1 class='title'>Open Mic</h1>
           </router-link>
         </div>

@@ -13,7 +13,7 @@
                 <div class="container">
                     <div class="columns">
                         <div class="column">
-                            <div class="card">
+                            <div class="card" id="upcoming-performances-card">
                                 <div class="card-content">
                                     <h2 class="title">Upcoming Performances Near You</h2> 
                                       <div v-for="performance in performances">
